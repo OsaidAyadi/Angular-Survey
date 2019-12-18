@@ -1,0 +1,40 @@
+<div class="survey-box" *ngIf="quetionsSize">
+
+  <div class="progress">
+    <p *ngIf="progress<=quetionsSize">
+      <span>Progress</span>
+      <span>({{progress}}/{{quetionsSize}})</span>
+    </p>
+    <p *ngIf="progress>quetionsSize">Your Result</p>
+    <div class="progress-bar">
+      <div [style.width]="compleatedStyle()" class="compleated"></div>
+    </div>
+  </div>
+  <app-personal-info [personalInfo]="personalInfo" *ngIf="progress === 0" (resultToParent)="getResult($event)"></app-personal-info>
+  <app-survey-questions 
+    *ngIf="progress > 0 && progress <= quetionsSize"
+    [data] = "data"
+    [progress] = "progress"
+  ></app-survey-questions>
+  <app-result [personalInfo]="personalInfo" *ngIf="progress === 5"></app-result>
+
+  <div class="footer">
+    <button
+      class="backward"
+      [disabled]="progress === 0"
+      (click)="arrow('backward')"
+    >&#60; BACKWARD
+    </button>
+
+    <button
+      class="forward"
+      [disabled]="progress === quetionsSize+1"
+      (click)="arrow('forward')"
+    >FORWARD &#62;
+    </button>
+  </div>
+</div>
+
+<div class="waiting" *ngIf="quetionsSize === 0">
+  <img src="assets/soso.gif" alt="Waiting ...">
+</div>

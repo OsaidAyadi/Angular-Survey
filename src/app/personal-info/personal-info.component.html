@@ -1,0 +1,33 @@
+
+<div class="personal-info">
+  <div class="inputs-field">
+    <div class="col-one">
+      <div><input type="text" placeholder="First name" [(ngModel)]="personalInfo[0].firstName"/></div>
+      <div><input type="text" placeholder="Last name" [(ngModel)]="personalInfo[0].lastName"></div>
+      <div><input type="text" placeholder="Your Email" [(ngModel)]="personalInfo[0].email"></div>
+    </div>
+    <div class="col-two">
+      <div>
+        <select [(ngModel)]="personalInfo[0].country"> 
+          <option value="" disabled selected>Select your country</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Palestine">Palestine</option>
+          <option value="Syria">Syria</option>
+          <option value="Iraq">Iraq</option>  
+        </select>
+      </div>
+      <div calss="age">
+        <input type="number" placeholder="Age" [(ngModel)]="personalInfo[0].age"/>
+      </div>
+      <div class="gender">
+        <input class="radio-gender custom-radio" type="radio" value="Male" [(ngModel)]="personalInfo[0].gender" name="gender" id="male"><label for="male">Male</label>
+        <input class="radio-gender custom-radio" type="radio" value="Female" [(ngModel)]="personalInfo[0].gender" name="gender" id="female"><label for="female">Female</label>
+      </div>
+    </div>
+  </div>
+  <div class="terms">
+    <input type="checkbox" id="term" class="check custom-checkbox" value="True" [(ngModel)]="personalInfo[0].terms" />
+    <label for="term">Do you accept <span><a href="#">terms and conditions?</a></span></label>
+  </div>
+  
+</div>

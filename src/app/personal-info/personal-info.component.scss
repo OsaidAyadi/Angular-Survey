@@ -1,0 +1,64 @@
+.personal-info {
+    background-color: white;
+    height: 100%;
+}
+
+.inputs-field {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+    color:black;
+    div {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.col-one input{
+    width:70%;
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+
+.col-two {
+    text-align: left;
+}
+
+.col-two input {
+    width: 15%;
+    font-size: 1.2em;
+}
+
+.col-two select {
+    width:71%;
+    padding-left: 10px;
+    font-size: 1.2em;
+    background-color:white;
+    border:none;
+}
+
+
+.incrementer input {
+    width:49%;
+}
+
+.terms {
+    font-size: 1.3em;
+    color:black;
+
+}
+.gender {
+    display: flex;
+}
+
+.gender > * {
+    margin: 0 30px;
+}
+
+.radio-gender {
+    display: none;
+}
+
+.check {
+    display: none;
+}

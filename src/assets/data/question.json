@@ -1,0 +1,22 @@
+[ 
+    {
+        "question": "Q1 : Blablablbalbl ?",
+        "answer": ["Osaid","Ayadi","Moh","Issa"],
+        "type": "checkbox"
+    },
+    {
+        "question": "Q2 : Co Co ?",
+        "answer": ["blabla","kokoko","lalalal","Booom"],
+        "type": "checkbox"
+    },
+    {
+        "question": "Q3 : Soso Moomo foofo ?",
+        "answer": ["lorem","bmw","accent","homePage"],
+        "type": "radio"
+    },
+    {
+        "question": "Q4 : Dee Feek Dom,Abt ?",
+        "answer": ["Facebook","LinkedIn","Instagram","SnapChat"],
+        "type": "radio"
+    }
+]

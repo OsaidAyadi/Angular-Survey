@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="question">
+    <p>{{data[progress-1].question}}</p>
+  </div>
+  <div class="answer" *ngFor="let item of data[progress-1].answer; let i of index">
+    <input type={{data[progress-1].type}} [ngClass]="getCustomCss(data[progress-1].type)" name={{progress-1}} id={{i}}/>  <label for={{i}}>{{item}}</label>
+  </div>
+</div>

@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+.custom-radio + label
+{
+    position: relative;
+    padding-left: 27px;
+    cursor: pointer;
+    line-height: 30px;
+    display: inline-block;
+    color: #666;
+}
+.custom-radio + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.custom-radio + label::after {
+    content: '';
+    width: 19px;
+    height: 19px;
+    background: rgb(70, 68, 68);
+    color:white;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.custom-radio:not(:checked) + label::after {
+    opacity: 0;
+}
+.custom-radio:checked + label::after {
+    opacity: 1;
+}
+
+.custom-checkbox + label
+{
+    position: relative;
+    padding-left: 27px;
+    cursor: pointer;
+    line-height: 30px;
+    display: inline-block;
+    color: #666;
+}
+.custom-checkbox + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.custom-checkbox + label::after {
+    content: '';
+    width: 19px;
+    height: 19px;
+    background: rgb(70, 68, 68);
+    color:white;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.custom-checkbox:not(:checked) + label::after {
+    opacity: 0;
+}
+.custom-checkbox:checked + label::after {
+    opacity: 1;
+}
